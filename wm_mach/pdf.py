@@ -137,11 +137,26 @@ class PilA4(PilCard):
 	def draw_mark(self,A4_img):
 		_draw = ImageDraw.Draw(A4_img)
 		ttfont = ImageFont.truetype("C:\\Windows\\Fonts\\STXINGKA.TTF",40)
+		if(self.num == 8):
+			self._draw_num8_mark(_draw,ttfont)
+		else:
+			self._draw_num12_mark(_draw,ttfont)
+
+
+	def _draw_num8_mark(self,draw,ttfont):
 		for i in range(0,self.rol+1):
 			_bx = (self.card_width + self.space) * i + self.space_left - 14  # +的x偏移量为14
 			for j in range(0,self.col+1):
 				_by = (self.card_height + self.space) * j + self.space_top - 20 # +的y偏移量为20
-				_draw.text((_bx,_by), str("+"), fill=(51,51,51,0),font=ttfont)
+				draw.text((_bx,_by), str("+"), fill=(51,51,51,0),font=ttfont)
+
+	def _draw_num12_mark(self,draw,ttfont):
+		for i in range(0,self.rol+1):
+			_bx = (self.card_width + self.space  ) * i + self.space_left - 24  # +的x偏移量为24
+			for j in range(0,self.col+1):
+				_by = (self.card_height + self.space ) * j + self.space_top -  16
+				draw.text((_bx,_by), str('+'), fill=(51,51,51,0),font=ttfont)
+
 	# 将外卖码保存为A4大小
 	def card_to_A4(self,_card_img_list):
 		# _A4_img = Image.new('RGB', (self.page_width, self.page_height), (255, 255, 255))

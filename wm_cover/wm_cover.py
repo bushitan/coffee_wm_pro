@@ -47,7 +47,8 @@ class Back(Base):
         _logo = _logo.resize((_real_width,_real_height),Image.ANTIALIAS)
         _x =  int(( self.image_width-_real_width)/2)
         _y = y #
-        self.img.paste(_logo , ( _x,_y), mask=_logo)
+        # self.img.paste(_logo , ( _x,_y), mask=_logo)
+        self.img.paste(_logo , ( _x,_y))
 
     def add_slogan(self,text,size=55,y=180):
         ttfont = ImageFont.truetype(self.font_path,size)
@@ -61,7 +62,8 @@ class Back(Base):
     def add_qr(self,path):
         _qr = Image.open(path)
         _qr = _qr.resize((self.qr_size,self.qr_size),Image.ANTIALIAS)
-        self.img.paste(_qr , (self.qr_x ,self.qr_y ), mask=_qr)
+        # self.img.paste(_qr , (self.qr_x ,self.qr_y ), mask=_qr)
+        self.img.paste(_qr , (self.qr_x ,self.qr_y ))
     def add_name(self,text):
         ttfont = ImageFont.truetype(self.font_path,self.name_size)
         self.draw.text(( self.name_x,self.name_y), str(text), fill=(0,0,0),font=ttfont)
@@ -252,17 +254,17 @@ if __name__ == "__main__":
     factory = Factory()
     class obj ():
         ##back
-        logo = r'img/logo.png'
+        logo = r'img/logo.jpg'
         sloagn = u"自家烘培咖啡馆"
-        host_qr = r'img/qr.png'
+        host_qr = r'img/qr.jpg'
         name = u"术咖啡"
         address = u"ADD:金平区金墩园6栋北座106金平区金墩园"
         tel = u"TEL: 13592881703"
 
         ### front
-        lite_qr = r'img/lite_qr1.png'
+        lite_qr = r'img/brm_store.png'
         num = 10 #点数
-        des = u"（到店兑换任意15元内饮品）"
+        des = u"（到店兑换任意15元内咖啡）"
 
         # logo 和slogan 的大小
         logo_size_8 = 400   #待修改
