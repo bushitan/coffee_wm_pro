@@ -51,7 +51,7 @@ class WmMach():
 		path_qr_file = web.save() # 二维码路径
 
 		# 测试
-		# path_qr_file= r"C:\lab\git\coffee\coffee_wm_pro\wm_mach\source\3qr\29_196301_197500/"
+		# path_qr_file= r"C:\lab\git\coffee\coffee_wm_pro\wm_mach\source\3qr\31_198101_199300/"
 
 		front_file = PATH_COVER + str(kwargs['store_id']) + "/" + kwargs['front_img'] #正面路径
 		back_file = PATH_COVER + str(kwargs['store_id']) + "/" + kwargs['back_img']	#反面路径
@@ -76,16 +76,22 @@ if __name__  == '__main__':
 	# data =  wm.get_yzy_data(22,197501,198100 ,front_img="front.jpg")
 	# wm.create( **data)
 
-	data =  wm.get_normal_12_data(31,198101,199300 ,front_img="12front.jpg")
-	wm.create( **data)
+	# data =  wm.get_normal_12_data(31,198101,199300 ,front_img="12front.jpg")
+	# wm.create( **data)
 
 
-	data =  wm.get_normal_12_data(24, 199301,199900  ,front_img="front.jpg" , back_img="back1.jpg")
+	# data =  wm.get_normal_12_data(24, 199301,199900  ,front_img="front.jpg" , back_img="back1.jpg")
+	# wm.create( **data)
+	# data =  wm.get_normal_12_data(24,199901 ,200500  ,front_img="front.jpg" , back_img="back2.jpg")
+	# wm.create( **data)
+	# data =  wm.get_normal_12_data(24,200501 ,201100  ,front_img="front.jpg" , back_img="back3.jpg")
+	# wm.create( **data)
+
+	data =  wm.get_yzy_data(22,201101,202300 ,front_img="front.jpg")
 	wm.create( **data)
-	data =  wm.get_normal_12_data(24,199901 ,200500  ,front_img="front.jpg" , back_img="back2.jpg")
+	data =  wm.get_yzy_data(22,202301,203500 ,front_img="front.jpg")
 	wm.create( **data)
-	data =  wm.get_normal_12_data(24,200501 ,201100  ,front_img="front.jpg" , back_img="back3.jpg")
-	wm.create( **data)
+
 	# data =  wm.get_yzy_data(22,35001,35012)
 	# print (data)
 
