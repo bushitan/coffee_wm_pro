@@ -1,7 +1,6 @@
 *.pyc
 *.json
 /wm_cover/img/
-/wm_cover/ps/
 /wm_cover/result/
 /wm_mach/pdf/
 /wm_mach/source/
