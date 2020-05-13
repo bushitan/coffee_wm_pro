@@ -94,7 +94,7 @@ class BackLite(Back):
         self.name_size = 40
         self.footer_x = self.name_x
         self.footer_y = 835
-        self.footer_width = 17 #最长字符
+        self.footer_width = 13 #最长字符
         self.footer_size = 25
         self.footer_space = 30
 
@@ -251,170 +251,38 @@ class Factory():
         t.save(file + u'tk.jpg')
 
 if __name__ == "__main__":
+    factory = Factory()
+    class obj ():
+        ##back
+        logo = r'img/logo_moster.jpg'
+        sloagn = u""
+        host_qr = r'img/kf.jpg'
+        name = u"怪兽咖啡"
+        address = u"地址：金城江区东风社区七组8号（五月花酒店旁边）"
+        tel = u"电话：18907889500"
 
-    
-    def add_card(logo,name,
-                 lite_qr ,des ,num,
-                 sloagn,host_qr,address,tel ):
+        ### front
+        lite_qr = r'img/66.png'
+        num = 6 #点数
+        des = u"（到店兑换20元内产品）"
 
-        factory = Factory()
-        print (logo)
-        class obj ():
-            ##back
-            logo = r'img/logo.jpg'
-            sloagn = u""
-            host_qr = r'img/kf.jpg'
-            name = u"方圆几里"
-            address = u'地址：城湖路旺府井商业街一楼14-7号' 
-            tel = u"电话：18076412811"
+        # logo 和slogan 的大小
+        logo_size_8 = 400   #待修改
+        logo_y_8 = 180      #待修改
+        slogan_size_8 = 55
+        slogan_y_8 = logo_size_8 + logo_y_8
 
-            ### front
-            lite_qr = r'img/73.png'
-            num = 8 #点数
-            des = u"（到店兑换20元内饮品）"
+        logo_size_12 = 320  #待修改
+        logo_y_12 = 180     #待修改
+        slogan_size_12 = 40
+        slogan_y_12 = logo_size_12 + logo_y_12
 
-            # logo 和slogan 的大小
-            logo_size_8 = 400   #待修改
-            logo_y_8 = 180      #待修改
-            slogan_size_8 = 55
-            slogan_y_8 = logo_size_8 + logo_y_8
-
-            logo_size_12 = 320  #待修改
-            logo_y_12 = 180     #待修改
-            slogan_size_12 = 40
-            slogan_y_12 = logo_size_12 + logo_y_12
-        obj.logo = logo
-        obj.name = name
-        obj.lite_qr = lite_qr
-        obj.des = des
-        obj.num = num
-        obj.sloagn = sloagn
-        obj.host_qr = host_qr
-        obj.address = address
-        obj.tel = tel
-
-        factory.make(obj)
-
-##    add_card(
-##        r'img/logo.jpg' ,u"琉璃净" , 
-##        r'img/73.png' , u"（到店兑换任意饮品一杯）" , 10,
-##        u"",r'img/kf.jpg' ,  u'' , u"",
-##    )
-##    add_card(
-##        r'img/logo.jpg' ,u"琉璃净" , 
-##        r'img/74.png' , u"满7元集1点，兑换一杯7元内饮品" , 10,
-##        u"",r'img/kf.jpg' ,  u'' , u"",
-##    )
-##    add_card(
-##        r'img/logo.jpg' ,u"琉璃净" , 
-##        r'img/75.png' , u"到店兑换饮品一杯" , 10,
-##        u"",r'img/kf.jpg' ,  u'' , u"",
-##    )
-##    add_card(
-##        r'img/logo.jpg' ,u"琉璃净" , 
-##        r'img/76.png' , u"满6元集1点，兑换一杯7元内饮品" , 10,
-##        u"",r'img/kf.jpg' ,  u'' , u"",
-##    )
-
-##    add_card(
-##        r'img/logo.jpg' ,u"琉璃净" , 
-##        r'img/77.png' , u"满6元集1点，兑换一杯8元以内饮品" , 10,
-##        u"",r'img/kf.jpg' ,  u'' , u"",
-##    )
-
-##    add_card(
-##        r'img/logo.jpg' ,u"琉璃净" , 
-##        r'img/78.png' , u"满6元集1点，兑换一杯8元以内饮品" , 10,
-##        u"",r'img/kf.jpg' ,  u'' , u"",
-##    )
-##    add_card(
-##        r'img/logo.jpg' ,u"琉璃净" , 
-##        r'img/79.png' , u"到店兑换一杯价值6元奶茶" , 10,
-##        u"",r'img/kf.jpg' ,  u'' , u"",
-##    )
-##    add_card(
-##        r'img/logo.jpg' ,u"琉璃净" , 
-##        r'img/80.png' , u"到店兑换任意饮品一杯" , 10,
-##        u"",r'img/kf.jpg' ,  u'' , u"",
-##    )
-
-
-##    add_card(
-##        r'img/logo.jpg' ,u"琉璃净" , 
-##        r'img/81.png' , u"满6元集1点，兑换一杯8元以内饮品" , 10,
-##        u"",r'img/kf.jpg' ,  u'' , u"",
-##    )
-
-
-    add_card(
-        r'img/logo.jpg' ,u"IN CUP" , 
-        r'img/55.png' , u"（到店兑换任意意式咖啡）" , 8,
-        u"自家烘焙咖啡馆",r'img/kf.jpg' ,  u'ADD：广州市番禺区德路96号' , u"TEL：15918880640",
-    )
-    
-##    add_card(
-##        r'img/logo.jpg' ,u"琉璃净" , 
-##        r'img/73.png' , u"（到店兑换任意饮品一杯）" , 10,
-##        u"",r'img/kf.jpg' ,  u'地址：城湖路旺府井商业街一楼14-7号' , u"电话：18076412811",
-##    )
+    factory.make(obj)
 
 
 
 
-##        factory = Factory()
-##        class obj ():
-##            ##back
-##            logo = r'img/logo.jpg'
-##            sloagn = u""
-##            host_qr = r'img/kf.jpg'
-##            name = u"方圆几里"
-##            address = u'地址：城湖路旺府井商业街一楼14-7号' 
-##            tel = u"电话：18076412811"
-##
-##            ### front
-##            lite_qr = r'img/58.png'
-##            num = 8 #点数
-##            des = u"（到店兑换20元内饮品）"
-##
-##            # logo 和slogan 的大小
-##            logo_size_8 = 400   #待修改
-##            logo_y_8 = 180      #待修改
-##            slogan_size_8 = 55
-##            slogan_y_8 = logo_size_8 + logo_y_8
-##
-##            logo_size_12 = 320  #待修改
-##            logo_y_12 = 180     #待修改
-##            slogan_size_12 = 40
-##            slogan_y_12 = logo_size_12 + logo_y_12
-##
-##        factory.make(obj)
 
-
-
-##        class obj ():
-##            ##back
-##            logo = logo
-##            sloagn = sloagn
-##            host_qr = host_qr
-##            name = name
-##            address = address 
-##            tel = tel
-##
-##            ### front
-##            lite_qr = lite_qr
-##            num = num #点数
-##            des = des
-##
-##            # logo 和slogan 的大小
-##            logo_size_8 = 400   #待修改
-##            logo_y_8 = 180      #待修改
-##            slogan_size_8 = 55
-##            slogan_y_8 = logo_size_8 + logo_y_8
-##
-##            logo_size_12 = 320  #待修改
-##            logo_y_12 = 180     #待修改
-##            slogan_size_12 = 40
-##            slogan_y_12 = logo_size_12 + logo_y_12
 
 
 
